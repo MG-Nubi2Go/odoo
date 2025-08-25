@@ -1,0 +1,22 @@
+<odoo>
+
+  <!-- Cotización (Sale Order) -->
+  <template id="report_saleorder_document_inherit_cloud" inherit_id="sale.report_saleorder_document">
+    <xpath expr="//table[@class='o_main_table']//tbody/tr" position="attributes">
+      <attribute name="t-if">
+        not (line.product_id.product_tmpl_id.x_is_rebate and not o.partner_id.show_rebates_on_pdf)
+      </attribute>
+    </xpath>
+  </template>
+
+  <!-- Factura (Account Move) -->
+  <template id="report_invoice_document_inherit_cloud" inherit_id="account.report_invoice_document">
+    <xpath expr="//table[@class='o_main_table']//tbody/tr" position="attributes">
+      <attribute name="t-if">
+        not (line.product_id.product_tmpl_id.x_is_rebate and not o.partner_id.show_rebates_on_pdf)
+      </attribute>
+    </xpath>
+  </template>
+
+</odoo>
+

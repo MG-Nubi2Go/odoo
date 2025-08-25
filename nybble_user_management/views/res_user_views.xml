@@ -1,0 +1,15 @@
+<odoo>
+    <record id="your_module_view_users_form_inherit" model="ir.ui.view">
+        <field name="name">res.users.form.inherit.partner_id</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[@class='oe_title']/group/field[@name='partner_id']"
+                position="attributes"
+            >
+                    <attribute name="groups" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

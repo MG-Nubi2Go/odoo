@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_commission_factor_admin,sales.commission.factor.admin,model_sales_commission_factor,base.group_system,1,1,1,1
+access_commission_factor_salesman,sales.commission.factor.salesman,model_sales_commission_factor,sales_team.group_sale_salesman,1,0,0,0
+access_commission_factor_manager,sales.commission.factor.manager,model_sales_commission_factor,sales_team.group_sale_manager,1,0,0,0

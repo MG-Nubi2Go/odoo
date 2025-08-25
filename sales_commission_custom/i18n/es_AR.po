@@ -1,0 +1,338 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sales_commission_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20250422\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-12 12:23+0000\n"
+"PO-Revision-Date: 2025-06-12 12:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_form
+msgid ""
+"<strong>Commission Factor:</strong> The factor to multiply with the markup "
+"amount (e.g., 0.004)"
+msgstr ""
+"<strong>Factor de Comisión:</strong> El factor a multiplicar con el monto de "
+"markup (ej., 0.004)"
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_form
+msgid "<strong>Example:</strong>"
+msgstr "<strong>Ejemplo:</strong>"
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_form
+msgid ""
+"<strong>Markup Percentage:</strong> The rounded markup percentage (e.g., "
+"enter 15 for 15%)"
+msgstr ""
+"<strong>Porcentaje de Markup:</strong> El porcentaje de markup redondeado "
+"(ej., ingresá 15 para 15%)"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order_line__markup_amount
+msgid "Absolute markup amount per unit"
+msgstr "Monto absoluto de markup por unidad"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sales_commission_factor__active
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_search
+msgid "Active"
+msgstr "Activo"
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_search
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order_line__can_edit_product_vendor
+msgid "Can Edit Product Vendor"
+msgstr "Puede Editar Proveedor del Producto"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order_line__commission_amount
+msgid "Commission Amount"
+msgstr "Monto de Comisión"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order_line__commission_factor
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sales_commission_factor__commission_factor
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_form
+msgid "Commission Factor"
+msgstr "Factor de Comisión"
+
+#. module: sales_commission_custom
+#: model:ir.model,name:sales_commission_custom.model_sales_commission_factor
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_form
+msgid "Commission Factor Configuration"
+msgstr "Configuración de Factor de Comisión"
+
+#. module: sales_commission_custom
+#: model:ir.actions.act_window,name:sales_commission_custom.action_commission_factor
+#: model:ir.ui.menu,name:sales_commission_custom.menu_commission_factor
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_search
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_tree
+msgid "Commission Factors"
+msgstr "Factores de Comisión"
+
+#. module: sales_commission_custom
+#: model:ir.actions.act_window,name:sales_commission_custom.action_sale_commission_report
+#: model:ir.ui.menu,name:sales_commission_custom.menu_commission_report
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_order_tree_commission_report
+msgid "Commission Report"
+msgstr "Reporte de Comisiones"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order_line__commission_factor
+msgid "Commission factor based on rounded markup percentage"
+msgstr "Factor de comisión basado en porcentaje de markup redondeado"
+
+#. module: sales_commission_custom
+#. odoo-python
+#: code:addons/sales_commission_custom/models/commission_factor.py:0
+msgid "Commission factor cannot be negative"
+msgstr "El factor de comisión no puede ser negativo"
+
+#. module: sales_commission_custom
+#. odoo-python
+#: code:addons/sales_commission_custom/models/commission_factor.py:0
+msgid "Commission factor cannot exceed 1.0"
+msgstr "El factor de comisión no puede ser mayor a 1.0"
+
+#. module: sales_commission_custom
+#: model_terms:ir.actions.act_window,help:sales_commission_custom.action_commission_factor
+msgid ""
+"Commission factors determine how commissions are calculated based on markup percentages.\n"
+"                Configure different factors for different markup ranges to control commission calculations."
+msgstr ""
+"Los factores de comisión determinan cómo se calculan las comisiones basándose en porcentajes de markup.\n"
+"                Configurá diferentes factores para diferentes rangos de markup para controlar los cálculos de comisión."
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_order_form_commission
+msgid "Cost & Markup Summary"
+msgstr "Resumen de Costo y Markup"
+
+#. module: sales_commission_custom
+#: model_terms:ir.actions.act_window,help:sales_commission_custom.action_commission_factor
+msgid "Create your first commission factor configuration!"
+msgstr "¡Creá tu primera configuración de factor de comisión!"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sales_commission_factor__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sales_commission_factor__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order_line__can_edit_product_vendor
+msgid "Determines if product vendor can be edited based on order state"
+msgstr "Determina si el proveedor del producto puede editarse según el estado de la orden"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sales_commission_factor__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sales_commission_factor__commission_factor
+msgid "Factor to multiply with markup to calculate commission (e.g., 0.004)"
+msgstr "Factor a multiplicar con el markup para calcular la comisión (ej., 0.004)"
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_search
+msgid "Group By"
+msgstr "Agrupar Por"
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_form
+msgid "Help"
+msgstr "Ayuda"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sales_commission_factor__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_form
+msgid "If markup amount is $100 → Commission = $100 × 0.004 = $0.40"
+msgstr "Si el monto de markup es $100 → Comisión = $100 × 0.004 = $0.40"
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_form
+msgid "If markup is 15% → Factor 0.004"
+msgstr "Si el markup es 15% → Factor 0.004"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sales_commission_factor__write_uid
+msgid "Last Updated by"
+msgstr "Última Actualización por"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sales_commission_factor__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización el"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order_line__markup_percentage
+msgid "Markup %"
+msgstr "Markup %"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order_line__markup_amount
+msgid "Markup Amount"
+msgstr "Monto de Markup"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sales_commission_factor__markup_percentage
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_search
+msgid "Markup Percentage"
+msgstr "Porcentaje de Markup"
+
+#. module: sales_commission_custom
+#. odoo-python
+#: code:addons/sales_commission_custom/models/commission_factor.py:0
+msgid "Markup percentage %s%% already exists"
+msgstr "El porcentaje de markup %s%% ya existe"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order_line__markup_percentage
+msgid ""
+"Markup percentage (rounded): ((purchase_price / price_unit) - 1) × -100"
+msgstr ""
+"Porcentaje de markup (redondeado): ((precio_compra / precio_unitario) - 1) × -100"
+
+#. module: sales_commission_custom
+#. odoo-python
+#: code:addons/sales_commission_custom/models/commission_factor.py:0
+msgid "Markup percentage cannot be negative"
+msgstr "El porcentaje de markup no puede ser negativo"
+
+#. module: sales_commission_custom
+#. odoo-python
+#: code:addons/sales_commission_custom/models/commission_factor.py:0
+msgid "Markup percentage cannot exceed 1000%"
+msgstr "El porcentaje de markup no puede ser mayor al 1000%"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order_line__product_vendor_id
+msgid "Product Vendor"
+msgstr "Proveedor"
+
+#. module: sales_commission_custom
+#. odoo-python
+#: code:addons/sales_commission_custom/models/sale_order_line.py:0
+msgid ""
+"Product vendor can only be modified in 'Draft' or 'Quotation Sent' states"
+msgstr ""
+"El proveedor del producto solo puede modificarse en estados 'Borrador' o 'Presupuesto Enviado'"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sales_commission_factor__markup_percentage
+msgid "Rounded markup percentage (e.g., 15 for 15%)"
+msgstr "Porcentaje de markup redondeado (ej., 15 para 15%)"
+
+#. module: sales_commission_custom
+#: model:ir.ui.menu,name:sales_commission_custom.menu_sales_commission_root
+msgid "Sales Commission"
+msgstr "Comisión de Ventas"
+
+#. module: sales_commission_custom
+#: model:ir.model,name:sales_commission_custom.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de Venta"
+
+#. module: sales_commission_custom
+#: model:ir.model,name:sales_commission_custom.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de Orden de Venta"
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_commission_factor_form
+msgid ""
+"This configuration defines the commission factor applied to each markup "
+"percentage."
+msgstr ""
+"Esta configuración define el factor de comisión aplicado a cada porcentaje "
+"de markup."
+
+#. module: sales_commission_custom
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_order_tree_commission_report
+msgid "Total Amount"
+msgstr "Monto Total"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order__total_commission_amount
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_order_tree_commission_report
+msgid "Total Commission"
+msgstr "Comisión Total"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order__total_cost_amount
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_order_tree_commission_report
+msgid "Total Cost"
+msgstr "Costo Total"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order__total_markup_amount
+#: model_terms:ir.ui.view,arch_db:sales_commission_custom.view_order_tree_commission_report
+msgid "Total Markup"
+msgstr "Markup Total"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,field_description:sales_commission_custom.field_sale_order__total_markup_percentage
+msgid "Total Markup %"
+msgstr "Markup Total %"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order__total_commission_amount
+msgid "Total commission amount for all order lines"
+msgstr "Monto total de comisión para todas las líneas de la orden"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order_line__commission_amount
+msgid "Total commission amount for this line"
+msgstr "Monto total de comisión para esta línea"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order__total_cost_amount
+msgid ""
+"Total cost amount for all order lines (sum of purchase_price × quantity)"
+msgstr ""
+"Monto total de costo para todas las líneas de la orden (suma de precio_compra × cantidad)"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order__total_markup_amount
+msgid "Total markup amount (amount_untaxed - total_cost_amount)"
+msgstr "Monto total de markup (monto_sin_impuestos - monto_costo_total)"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order__total_markup_percentage
+msgid ""
+"Total markup percentage (rounded) calculated between total cost and amount "
+"without taxes"
+msgstr ""
+"Porcentaje total de markup (redondeado) calculado entre el costo total y "
+"el monto sin impuestos"
+
+#. module: sales_commission_custom
+#: model:ir.model.fields,help:sales_commission_custom.field_sale_order_line__product_vendor_id
+msgid ""
+"Vendor for commission calculation purposes (independent from product vendor)"
+msgstr ""
+"Proveedor para propósitos de cálculo de comisión (independiente del proveedor del producto)"

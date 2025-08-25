@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Menú Principal -->
+    <menuitem
+        id="menu_user_settings"
+        name="Ajustes Usuarios"
+        sequence="1000"
+        web_icon="nybble_user_management,static/description/icon.png"
+    />
+
+    <!-- Submenú de Usuarios -->
+    <menuitem
+        id="menu_users"
+        name="Usuarios"
+        parent="menu_user_settings"
+        groups="group_user_management"
+        action="base.action_res_users"
+    />
+    <!-- Quiero hacer menu para plantillas de correos-->
+    <menuitem
+        id="menu_email_templates"
+        name="Plantillas de Correos"
+        parent="menu_user_settings"
+        groups="group_user_management"
+        action="mail.action_email_template_tree_all"
+    />
+
+</odoo>

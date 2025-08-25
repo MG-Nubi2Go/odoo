@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Commission Factor Tree View -->
+    <record id="view_commission_factor_tree" model="ir.ui.view">
+        <field name="name">sales.commission.factor.list</field>
+        <field name="model">sales.commission.factor</field>
+        <field name="arch" type="xml">
+            <list string="Commission Factors" editable="bottom">
+                <field name="markup_percentage" />
+                <field name="commission_factor" />
+                <field name="display_name" />
+                <field name="active" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Commission Factor Form View -->
+    <record id="view_commission_factor_form" model="ir.ui.view">
+        <field name="name">sales.commission.factor.form</field>
+        <field name="model">sales.commission.factor</field>
+        <field name="arch" type="xml">
+            <form string="Commission Factor">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="toggle_active"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-archive"
+                        >
+                            <field
+                                name="active"
+                                widget="boolean_button"
+                                options='{"terminology": {"string_true": "Active", "string_false": "Archived"}}'
+                            />
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="markup_percentage" />
+                            <field name="commission_factor" />
+                        </group>
+                        <group>
+                            <field name="display_name" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Help" name="help">
+                            <div class="o_form_help">
+                                <h3>Commission Factor Configuration</h3>
+                                <p>
+                                    This configuration defines the commission factor applied to each markup percentage.
+                                </p>
+                                <ul>
+                                    <li><strong
+                                        >Markup Percentage:</strong> The rounded markup percentage (e.g., enter 15 for 15%)</li>
+                                    <li><strong
+                                        >Commission Factor:</strong> The factor to multiply with the markup amount (e.g., 0.004)</li>
+                                </ul>
+                                <p><strong>Example:</strong></p>
+                                <ul>
+                                    <li>If markup is 15% → Factor 0.004</li>
+                                    <li
+                                    >If markup amount is $100 → Commission = $100 × 0.004 = $0.40</li>
+                                </ul>
+                            </div>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Commission Factor Search View -->
+    <record id="view_commission_factor_search" model="ir.ui.view">
+        <field name="name">sales.commission.factor.search</field>
+        <field name="model">sales.commission.factor</field>
+        <field name="arch" type="xml">
+            <search string="Commission Factors">
+                <field name="markup_percentage" />
+                <field name="commission_factor" />
+                <field name="display_name" />
+                <separator />
+                <filter
+                    name="active"
+                    string="Active"
+                    domain="[('active', '=', True)]"
+                />
+                <filter
+                    name="archived"
+                    string="Archived"
+                    domain="[('active', '=', False)]"
+                />
+                <group expand="0" string="Group By">
+                    <filter
+                        name="group_by_markup"
+                        string="Markup Percentage"
+                        domain="[]"
+                        context="{'group_by': 'markup_percentage'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action for Commission Factors -->
+    <record id="action_commission_factor" model="ir.actions.act_window">
+        <field name="name">Commission Factors</field>
+        <field name="res_model">sales.commission.factor</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_active': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first commission factor configuration!
+            </p>
+            <p>
+                Commission factors determine how commissions are calculated based on markup percentages.
+                Configure different factors for different markup ranges to control commission calculations.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem
+        id="menu_sales_commission_root"
+        name="Sales Commission"
+        parent="sale.sale_menu_root"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_commission_factor"
+        name="Commission Factors"
+        parent="menu_sales_commission_root"
+        action="action_commission_factor"
+        groups="base.group_system"
+        sequence="10"
+    />
+
+</odoo>

@@ -1,0 +1,66 @@
+<odoo>
+  <!-- Campos y botones en Suscripción -->
+  <record id="view_subscription_form_inherit_cloud" model="ir.ui.view">
+    <field name="name">sale.subscription.form.cloud.simple</field>
+    <field name="model">sale.subscription</field>
+    <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet" position="inside">
+        <group string="Configuración VM">
+          <field name="vcpus"/>
+          <field name="ram_gb"/>
+          <field name="disk_gb"/>
+          <field name="backup_extra_points"/>
+          <field name="vm_size_label" readonly="1"/>
+        </group>
+        <group string="Prorrateo / Rebate">
+          <field name="x_proration_policy"/>
+          <field name="reseller_partner_id"/>
+          <field name="reseller_rebate_pct"/>
+        </group>
+      </xpath>
+
+      <xpath expr="//header" position="inside">
+        <button name="%(action_vm_configurator_wizard)d"
+                type="action" class="oe_highlight"
+                string="Configurar VM"/>
+        <button name="action_prorate_first_period"
+                type="object" string="Prorratear 1er período"/>
+        <button name="action_liquidate_rebate"
+                type="object" string="Liquidar rebate"/>
+      </xpath>
+    </field>
+  </record>
+
+  <!-- Acciones para abrir el wizard desde Suscripción -->
+  <record id="action_vm_configurator_wizard" model="ir.actions.act_window">
+    <field name="name">Configurar VM</field>
+    <field name="res_model">vm.configurator.wizard</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+    <field name="context">{'default_subscription_id': active_id,
+                           'default_vcpus': active_id and active_id.vcpus or 2}</field>
+  </record>
+
+  <!-- Botón en Cotización (opcional) -->
+  <record id="view_order_form_inherit_cloud" model="ir.ui.view">
+    <field name="name">sale.order.form.cloud.simple</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//header" position="inside">
+        <button name="%(action_vm_configurator_wizard_from_so)d"
+                type="action" string="Configurar VM"/>
+      </xpath>
+    </field>
+  </record>
+
+  <record id="action_vm_configurator_wizard_from_so" model="ir.actions.act_window">
+    <field name="name">Configurar VM</field>
+    <field name="res_model">vm.configurator.wizard</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+    <field name="context">{'default_order_id': active_id}</field>
+  </record>
+</odoo>
+

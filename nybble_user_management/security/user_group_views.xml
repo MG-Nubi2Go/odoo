@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Categoría de Permisos Adicionales -->
+    <record id="module_category_user_management" model="ir.module.category">
+        <field name="name">Permisos adicionales</field>
+        <field name="sequence" eval="10" />
+    </record>
+
+    <!-- Grupo de Gestión de Usuarios -->
+    <record id="group_user_management" model="res.groups">
+        <field name="name">Gestión de Usuarios</field>
+        <field name="category_id" ref="module_category_user_management" />
+        <field
+            name="comment"
+        >Permite administrar usuarios sin acceso a configuraciones críticas.</field>
+    </record>
+
+</odoo>

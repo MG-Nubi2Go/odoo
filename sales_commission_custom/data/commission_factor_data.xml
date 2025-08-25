@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Commission Factor Data -->
+        <record id="commission_factor_15" model="sales.commission.factor">
+            <field name="markup_percentage">15</field>
+            <field name="commission_factor">0.0040</field>
+        </record>
+
+        <record id="commission_factor_16" model="sales.commission.factor">
+            <field name="markup_percentage">16</field>
+            <field name="commission_factor">0.007</field>
+        </record>
+
+        <record id="commission_factor_17" model="sales.commission.factor">
+            <field name="markup_percentage">17</field>
+            <field name="commission_factor">0.01</field>
+        </record>
+
+        <record id="commission_factor_18" model="sales.commission.factor">
+            <field name="markup_percentage">18</field>
+            <field name="commission_factor">0.015</field>
+        </record>
+
+        <record id="commission_factor_19" model="sales.commission.factor">
+            <field name="markup_percentage">19</field>
+            <field name="commission_factor">0.02</field>
+        </record>
+
+        <record id="commission_factor_20" model="sales.commission.factor">
+            <field name="markup_percentage">20</field>
+            <field name="commission_factor">0.025</field>
+        </record>
+
+        <record id="commission_factor_21" model="sales.commission.factor">
+            <field name="markup_percentage">21</field>
+            <field name="commission_factor">0.03</field>
+        </record>
+
+        <record id="commission_factor_22" model="sales.commission.factor">
+            <field name="markup_percentage">22</field>
+            <field name="commission_factor">0.035</field>
+        </record>
+
+    </data>
+</odoo>
