@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.env
+.venv/
+*.log
+
+# Odoo típicos
+i18n/*.pot
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vscode/
+.odoo*
+*.zip
+
+# Tests / tooling
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+
+# Docker volúmenes/logs locales (NO los metas en addons si están arriba en sandbox/)
+# (dejados por si alguien corre cosas aquí)
+db-data/
+db-logs/
+odoo-logs/
+odoo-data/
+filestore-*/
+sandbox.dump
+
+# Node (por si tenés assets)
+node_modules/
+dist/
+build/
+
