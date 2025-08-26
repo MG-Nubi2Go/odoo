@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="ir_config_parameter_cloud_nubi2go_company_name" model="ir.config_parameter">
+            <field name="key">cloud.nubi2go_company_name</field>
+            <field name="value">Nubi2go</field>
+        </record>
+    </data>
+</odoo>

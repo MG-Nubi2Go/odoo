@@ -1,1 +1,1 @@
-from . import sale_order_vm
+from . import ir_ui_menu
